@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   
-  // Optimize for Vercel deployment
-  swcMinify: true,
-  
   // Ensure all pages are properly handled
   experimental: {
     optimizePackageImports: ['framer-motion'],
