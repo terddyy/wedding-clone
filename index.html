@@ -190,46 +190,20 @@
             <p class="rsvp-subtitle">Please respond by May 1st, 2026</p>
             
             <form class="rsvp-form" id="rsvpForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Please enter your full name" required>
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="guests">Number of Guests *</label>
-                        <select id="guests" name="guests" required>
-                            <option value="">Select...</option>
-                            <option value="1">1 Guest</option>
-                            <option value="2">2 Guests</option>
-                            <option value="3">3 Guests</option>
-                            <option value="4">4 Guests</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="attendance">Will you attend? *</label>
-                        <select id="attendance" name="attendance" required>
-                            <option value="">Select...</option>
-                            <option value="yes">Joyfully Accepts</option>
-                            <option value="no">Regretfully Declines</option>
-                        </select>
-                    </div>
-                </div>
-
                 <div class="form-group">
-                    <label for="dietary">Dietary Restrictions</label>
-                    <textarea id="dietary" name="dietary" rows="3" placeholder="Please let us know about any dietary restrictions or allergies..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Special Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Share your well wishes with us..."></textarea>
+                    <label>Will you be celebrating with us? *</label>
+                    <div class="attendance-buttons">
+                        <input type="radio" id="attending-yes" name="attendance" value="Joyfully Accepts" required>
+                        <label for="attending-yes" class="attendance-btn">✓ Joyfully Accepts</label>
+                        
+                        <input type="radio" id="attending-no" name="attendance" value="Regretfully Declines">
+                        <label for="attending-no" class="attendance-btn">X Regretfully Declines</label>
+                    </div>
                 </div>
 
                 <button type="submit" class="submit-button">Submit RSVP</button>

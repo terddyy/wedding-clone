@@ -512,126 +512,6 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.details-info-grid {
-    display: grid;
-    gap: 25px;
-}
-
-.info-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.info-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.info-icon {
-    font-size: 1.8rem;
-}
-
-.info-header h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    color: var(--dark-text);
-}
-
-.info-card p {
-    color: var(--light-text);
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.info-list {
-    list-style: none;
-    padding-left: 5px;
-}
-
-.info-list li {
-    display: flex;
-    gap: 15px;
-    color: var(--light-text);
-    margin-bottom: 8px;
-}
-
-.info-list li span {
-    font-weight: 500;
-    color: var(--dark-text);
-    width: 80px;
-}
-
-.hotel-list {
-    list-style: '🏨';
-    padding-left: 25px;
-    color: var(--light-text);
-}
-
-.hotel-list li {
-    padding-left: 10px;
-    margin-bottom: 5px;
-}
-
-.detail-card {
-    background-color: var(--white);
-    padding: 40px 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.detail-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.detail-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.detail-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    color: var(--dark-text);
-}
-
-.detail-card p {
-    margin: 8px 0;
-    color: var(--light-text);
-    line-height: 1.6;
-}
-
-.detail-card strong {
-    color: var(--dark-text);
-}
-
-.detail-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--accent-brown);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.detail-link:hover {
-    color: #73604a;
-    text-decoration: underline;
-}
-
-.detail-note {
-    font-size: 0.85rem;
-    font-style: italic;
-    margin-top: 10px;
-}
-
 /* Gallery Section */
 .gallery-section {
     padding: 100px 20px;
@@ -698,17 +578,58 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-bottom: 25px;
-}
 
+ 
 .form-group {
     margin-bottom: 25px;
 }
 
+/* New RSVP Button Styles */
+.attendance-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.attendance-buttons input[type="radio"] {
+    display: none; /* Hide the actual radio button */
+}
+
+.attendance-btn {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.attendance-buttons input[type="radio"]:checked + .attendance-btn {
+    border-color: var(--accent-brown);
+    background-color: var(--secondary-bg);
+    color: var(--accent-brown);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+#attending-yes:checked + .attendance-btn {
+    border-color: #4caf50;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+#attending-no:checked + .attendance-btn {
+    border-color: #f44336;
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.attendance-btn:hover {
+    border-color: var(--accent-brown);
+}
+ 
 .form-group label {
     display: block;
     margin-bottom: 10px;
