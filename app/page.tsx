@@ -112,7 +112,9 @@ export default function HomePage() {
                 <div>
                   <h3 className="font-semibold mb-1" style={{ color: '#8b7355' }}>Ceremony & Reception</h3>
                   <p style={{ color: '#2c2c2c' }}>Kapitan Moy - Bulwagang Bayani (2nd Floor)</p>
+                  
                 </div>
+                <h3 className="font-semibold mb-1" style={{ color: '#8b7355' }}>--Close this tab now and scroll down--</h3>
               </div>
             </div>
           </motion.div>
