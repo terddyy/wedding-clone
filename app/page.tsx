@@ -143,6 +143,125 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Details Section */}
+      <section className="py-20" style={{ backgroundColor: '#f5e6d3' }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl text-center mb-16" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+            Wedding Details
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Location Card */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-64 flex items-center justify-center" style={{ backgroundColor: '#e8d5c4' }}>
+                <span className="text-lg" style={{ color: '#8b7355' }}>Venue Image Here</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+                  The Ceremony & Reception
+                </h3>
+                <p className="font-semibold mb-1" style={{ color: '#2c2c2c' }}>The Garden Estate</p>
+                <p className="mb-4" style={{ color: '#6b6b6b' }}>123 Celebration Lane, Beautiful City</p>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all hover:scale-105"
+                  style={{ backgroundColor: '#8b7355', color: '#ffffff' }}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+
+            {/* Info Cards Grid */}
+            <div className="grid gap-6">
+              {/* Schedule Card */}
+              <div className="bg-white rounded-lg p-6 shadow-lg">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">🕒</span>
+                  <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Schedule</h4>
+                </div>
+                <ul className="space-y-2">
+                  {[
+                    { time: '4:00 PM', event: 'Ceremony' },
+                    { time: '5:00 PM', event: 'Cocktail Hour' },
+                    { time: '6:00 PM', event: 'Reception' },
+                    { time: '8:00 PM', event: 'Dancing' },
+                  ].map((item) => (
+                    <li key={item.time} className="flex items-center gap-2">
+                      <span className="font-semibold" style={{ color: '#8b7355' }}>{item.time}</span>
+                      <span style={{ color: '#2c2c2c' }}>{item.event}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Dress Code Card */}
+              <div className="bg-white rounded-lg p-6 shadow-lg">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">👔</span>
+                  <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Dress Code</h4>
+                </div>
+                <p style={{ color: '#2c2c2c' }}>
+                  We'd love to see our friends and family get dressed up with us! The dress code is{' '}
+                  <strong style={{ color: '#8b7355' }}>Semi-Formal</strong>.
+                </p>
+              </div>
+
+              {/* Accommodations Card */}
+              <div className="bg-white rounded-lg p-6 shadow-lg">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">🏨</span>
+                  <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Accommodations</h4>
+                </div>
+                <p className="mb-3" style={{ color: '#2c2c2c' }}>
+                  For your convenience, we've arranged special rates at nearby hotels. Please mention the "Jhe & Eifer Wedding" when booking.
+                </p>
+                <ul className="space-y-1">
+                  <li style={{ color: '#6b6b6b' }}>• The Grand Hotel</li>
+                  <li style={{ color: '#6b6b6b' }}>• Garden Inn & Suites</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20" style={{ backgroundColor: '#ffffff' }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl text-center mb-16" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+            Our Journey Together
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              'linear-gradient(135deg, #e8d5c4 0%, #d4b5a0 100%)',
+              'linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%)',
+              'linear-gradient(135deg, #d4b5a0 0%, #c4a590 100%)',
+              'linear-gradient(135deg, #e8d5c4 0%, #f5e6d3 100%)',
+              'linear-gradient(135deg, #c4a590 0%, #d4b5a0 100%)',
+              'linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%)',
+            ].map((gradient, index) => (
+              <div
+                key={index}
+                className="aspect-square rounded-lg flex items-center justify-center"
+                style={{ background: gradient }}
+              >
+                <span className="text-5xl opacity-60">📸</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-center mt-8" style={{ color: '#6b6b6b', fontStyle: 'italic' }}>
+            Add your favorite photos here!
+          </p>
+        </div>
+      </section>
+
       {/* RSVP Section */}
       <section className="py-20" style={{ backgroundColor: '#f5e6d3' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
