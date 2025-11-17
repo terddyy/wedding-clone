@@ -27,7 +27,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { adminDb } from '@/lib/firebase/adminApp';
+import { getAdminDb } from '@/lib/firebase/adminApp';
 import { sanitizeInput } from '@/lib/utils';
 import { RSVPFormData, RSVPStatus } from '@/types';
 
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
     }
 
     // STEP 3: Fetch guest document from Firestore
-    const guestRef = adminDb.collection('guests').doc(guestId);
+    const guestRef = getAdminDb().collection('guests').doc(guestId);
     const guestDoc = await guestRef.get();
 
     // Verify guest exists

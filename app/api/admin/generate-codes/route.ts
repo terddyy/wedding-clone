@@ -7,7 +7,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { adminDb } from '@/lib/firebase/adminApp';
+import { getAdminDb } from '@/lib/firebase/adminApp';
 import * as bcrypt from 'bcrypt';
 import * as crypto from 'crypto';
 
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     const existingCodes = new Set<string>();
 
     // Fetch existing codes to avoid duplicates
-    const existingSnapshot = await adminDb.collection('guests').get();
+    const existingSnapshot = await getAdminDb().collection('guests').get();
     existingSnapshot.docs.forEach((doc) => {
       existingCodes.add((doc.data() as any).code_hash);
     });
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       };
 
       try {
-        await adminDb.collection('guests').add(guestDoc);
+        await getAdminDb().collection('guests').add(guestDoc);
         codes.push({
           name: name.trim(),
           code: code,

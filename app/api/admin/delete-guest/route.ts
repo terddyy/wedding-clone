@@ -7,7 +7,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { adminDb } from '@/lib/firebase/adminApp';
+import { getAdminDb } from '@/lib/firebase/adminApp';
 
 export async function DELETE(request: NextRequest) {
   try {
@@ -24,7 +24,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     // Delete from Firestore
-    await adminDb.collection('guests').doc(guestId).delete();
+    await getAdminDb().collection('guests').doc(guestId).delete();
 
     return NextResponse.json({ success: true, message: 'Guest deleted successfully' });
   } catch (error) {

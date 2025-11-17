@@ -26,7 +26,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { adminDb } from '@/lib/firebase/adminApp';
+import { getAdminDb } from '@/lib/firebase/adminApp';
 import { verifyCode, generateSession } from '@/lib/utils';
 
 // Force Node.js runtime (required for bcrypt)
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
 
     // STEP 2: Query Firestore for all unused guest codes
     // Security: Only query guests with used: false to prevent replay attacks
-    const guestsRef = adminDb.collection('guests');
+    const guestsRef = getAdminDb().collection('guests');
     const snapshot = await guestsRef.where('used', '==', false).get();
 
     // If no unused codes exist, return generic error

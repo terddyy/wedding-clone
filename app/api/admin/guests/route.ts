@@ -7,7 +7,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { adminDb } from '@/lib/firebase/adminApp';
+import { getAdminDb } from '@/lib/firebase/adminApp';
 
 export async function GET(request: NextRequest) {
   try {
@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Fetch all guests from Firestore
-    const guestsSnapshot = await adminDb.collection('guests').get();
+    const guestsSnapshot = await getAdminDb().collection('guests').get();
     const guests = guestsSnapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
