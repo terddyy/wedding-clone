@@ -170,9 +170,9 @@ export default function HomePage() {
                   The Ceremony & Reception
                 </h3>
                 <p className="font-semibold mb-1" style={{ color: '#2c2c2c' }}>Kapitan Moy - Bulwagang Bayani</p>
-                <p className="mb-4" style={{ color: '#6b6b6b' }}>JP Rizal Sta. Elena, Marikina City</p>
+                <p className="mb-4" style={{ color: '#6b6b6b' }}>323 J. P. Rizal St, Marikina, 1800 Metro Manila</p>
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/place/Kapitan+Moy+House/@14.6306094,121.0930067,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b95955015de5:0xe027d61d451def23!8m2!3d14.6306094!4d121.0955816!16s%2Fm%2F010gnp5z?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all hover:scale-105"
@@ -193,9 +193,9 @@ export default function HomePage() {
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center gap-3 mb-4">
                 <img
-                  src="/images/clock.png"
+                  src="/images/clock.svg"
                   alt="Schedule"
-                  className="w-20 h-20 md:w-20 md:h-30 object-contain"
+                  className="w-10 h-10 md:w-20 md:h-30 object-contain"
                 />
                 <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Schedule</h4>
               </div>
