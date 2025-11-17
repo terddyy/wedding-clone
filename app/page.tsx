@@ -96,9 +96,9 @@ export default function HomePage() {
             </button>
             
             <div className="text-center">
-              <p className="text-sm mb-4" style={{ color: '#6b6b6b' }}>Together with their families</p>
+              <p className="text-sm mb-4" style={{ color: '#6b6b6b' }}>Together with our families</p>
               <h2 className="text-5xl mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Jhe & Eifer</h2>
-              <p className="mb-8" style={{ color: '#2c2c2c' }}>Request the pleasure of your company at their wedding celebration.</p>
+              <p className="mb-8" style={{ color: '#2c2c2c' }}>Request the pleasure of your company at our wedding celebration.</p>
               
               <div className="space-y-4 mb-8">
                 <div>
