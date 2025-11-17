@@ -16,11 +16,13 @@ import { motion } from 'framer-motion';
 export default function HomePage() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [showModal, setShowModal] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   // Wedding date: December 21, 2025
   const weddingDate = new Date('2025-12-21T16:00:00');
 
   useEffect(() => {
+    setHasMounted(true);
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = weddingDate.getTime() - now;
@@ -62,7 +64,8 @@ export default function HomePage() {
             JHE & EIFER
           </h1>
           <button
-            onClick={() => setShowModal(true)}
+            onClick={() => setShowModal(true)
+            }
             className="px-8 py-4 rounded-lg font-medium transition-all hover:scale-105 flex items-center gap-3 mx-auto"
             style={{ backgroundColor: '#8b7355', color: '#ffffff' }}
           >
@@ -120,28 +123,30 @@ export default function HomePage() {
       )}
 
       {/* Countdown Section */}
-      <section className="py-20 text-center" style={{ backgroundColor: '#ffffff' }}>
-        <h2 className="text-4xl md:text-5xl mb-12" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
-          Counting Down to Our Special Day
-        </h2>
-        <div className="flex justify-center gap-8 flex-wrap">
-          {[
-            { label: 'Days', value: countdown.days },
-            { label: 'Hours', value: countdown.hours },
-            { label: 'Minutes', value: countdown.minutes },
-            { label: 'Seconds', value: countdown.seconds },
-          ].map((item) => (
-            <div key={item.label} className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
-                {String(item.value).padStart(2, '0')}
+      {hasMounted && (
+        <section className="py-20 text-center" style={{ backgroundColor: '#ffffff' }}>
+          <h2 className="text-4xl md:text-5xl mb-12" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+            Counting Down to Our Special Day
+          </h2>
+          <div className="flex justify-center gap-8 flex-wrap">
+            {[
+              { label: 'Days', value: countdown.days },
+              { label: 'Hours', value: countdown.hours },
+              { label: 'Minutes', value: countdown.minutes },
+              { label: 'Seconds', value: countdown.seconds },
+            ].map((item) => (
+              <div key={item.label} className="text-center">
+                <div className="text-5xl md:text-6xl font-light mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+                  {String(item.value).padStart(2, '0')}
+                </div>
+                <div className="text-sm tracking-wide" style={{ color: '#6b6b6b' }}>
+                  {item.label}
+                </div>
               </div>
-              <div className="text-sm tracking-wide" style={{ color: '#6b6b6b' }}>
-                {item.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Details Section */}
       <section className="py-20" style={{ backgroundColor: '#f5e6d3' }}>
@@ -187,9 +192,13 @@ export default function HomePage() {
               {/* Schedule Card */}
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">🕒</span>
-                  <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Schedule</h4>
-                </div>
+                <img
+                  src="/images/clock.png"
+                  alt="Schedule"
+                  className="w-20 h-20 md:w-20 md:h-30 object-contain"
+                />
+                <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Schedule</h4>
+              </div>
                 <ul className="space-y-2">
                   {[
                     { time: '5:00 PM', event: 'Ceremony' },
@@ -208,9 +217,13 @@ export default function HomePage() {
               {/* Dress Code Card */}
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center gap-3 mb-4">
-                      <img src="/images/suit.png" alt="Dress code" className="w-8 h-8 object-contain" />
-                  <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Dress Code</h4>
-                </div>
+                <img
+                  src="/images/suit.png"
+                  alt="Dress code"
+                  className="w-20 h-20 md:w-20 md:h-30 object-contain"
+                />
+                <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Dress Code</h4>
+              </div>
                 <p style={{ color: '#2c2c2c' }}>
                   We'd love to see our friends and family get dressed up with us! The dress code is{' '}
                   <strong style={{ color: '#8b7355' }}>Whimsical Cocktail Formal Attire</strong>.

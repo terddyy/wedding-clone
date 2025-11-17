@@ -189,7 +189,7 @@ export default function RSVPCodePage() {
         <p className="text-center text-sm mt-6" style={{ color: '#6b6b6b' }}>
           Can't find your code?{' '}
           <a
-            href="mailto:terddy03@gmail.com"
+            href="https://www.facebook.com/jennifer.salo.7923"
             className="underline hover:font-semibold"
             style={{ color: '#8b7355' }}
           >
