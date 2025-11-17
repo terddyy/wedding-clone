@@ -95,7 +95,7 @@ export default function HomePage() {
             <div className="text-center">
               <p className="text-sm mb-4" style={{ color: '#6b6b6b' }}>Together with their families</p>
               <h2 className="text-5xl mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Jhe & Eifer</h2>
-              <p className="mb-8" style={{ color: '#2c2c2c' }}>request the pleasure of your company at their wedding celebration</p>
+              <p className="mb-8" style={{ color: '#2c2c2c' }}>Request the pleasure of your company at their wedding celebration.</p>
               
               <div className="space-y-4 mb-8">
                 <div>
@@ -107,13 +107,13 @@ export default function HomePage() {
                   <p style={{ color: '#2c2c2c' }}>4:00 PM</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1" style={{ color: '#8b7355' }}>Venue</h3>
-                  <p style={{ color: '#2c2c2c' }}>The Garden Estate</p>
-                  <p className="text-sm" style={{ color: '#6b6b6b' }}>To be announced</p>
+                  <h3 className="font-semibold mb-1" style={{ color: '#8b7355' }}>Ceremony & Reception</h3>
+                  <p style={{ color: '#2c2c2c' }}>Kapitan Moy - Bulwagang Bayani (2nd Floor)</p>
+                  
                 </div>
               </div>
               
-              <p className="text-sm italic" style={{ color: '#6b6b6b' }}>Reception to follow</p>
+             
             </div>
           </motion.div>
         </div>
@@ -153,15 +153,19 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Location Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 flex items-center justify-center" style={{ backgroundColor: '#e8d5c4' }}>
-                <span className="text-lg" style={{ color: '#8b7355' }}>Venue Image Here</span>
+              <div className="relative h-64 w-full">
+                <img 
+                  src="/images/kapmoy.png" 
+                  alt="Wedding Venue"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
                   The Ceremony & Reception
                 </h3>
-                <p className="font-semibold mb-1" style={{ color: '#2c2c2c' }}>The Garden Estate</p>
-                <p className="mb-4" style={{ color: '#6b6b6b' }}>123 Celebration Lane, Beautiful City</p>
+                <p className="font-semibold mb-1" style={{ color: '#2c2c2c' }}>Kapitan Moy - Bulwagang Bayani</p>
+                <p className="mb-4" style={{ color: '#6b6b6b' }}>JP Rizal Sta. Elena, Marikina City</p>
                 <a
                   href="https://maps.google.com"
                   target="_blank"
@@ -188,10 +192,10 @@ export default function HomePage() {
                 </div>
                 <ul className="space-y-2">
                   {[
-                    { time: '4:00 PM', event: 'Ceremony' },
-                    { time: '5:00 PM', event: 'Cocktail Hour' },
-                    { time: '6:00 PM', event: 'Reception' },
-                    { time: '8:00 PM', event: 'Dancing' },
+                    { time: '5:00 PM', event: 'Ceremony' },
+                    { time: '6:30 PM', event: 'Dinner' },
+                    { time: '7:30 PM', event: 'Program & Cocktail Hour' },
+                    { time: '8:30 PM', event: 'Dancing' },
                   ].map((item) => (
                     <li key={item.time} className="flex items-center gap-2">
                       <span className="font-semibold" style={{ color: '#8b7355' }}>{item.time}</span>
@@ -204,29 +208,16 @@ export default function HomePage() {
               {/* Dress Code Card */}
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">👔</span>
+                      <img src="/images/suit.png" alt="Dress code" className="w-8 h-8 object-contain" />
                   <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Dress Code</h4>
                 </div>
                 <p style={{ color: '#2c2c2c' }}>
                   We'd love to see our friends and family get dressed up with us! The dress code is{' '}
-                  <strong style={{ color: '#8b7355' }}>Semi-Formal</strong>.
+                  <strong style={{ color: '#8b7355' }}>Whimsical Cocktail Formal Attire</strong>.
                 </p>
               </div>
 
-              {/* Accommodations Card */}
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">🏨</span>
-                  <h4 className="text-xl" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>Accommodations</h4>
-                </div>
-                <p className="mb-3" style={{ color: '#2c2c2c' }}>
-                  For your convenience, we've arranged special rates at nearby hotels. Please mention the "Jhe & Eifer Wedding" when booking.
-                </p>
-                <ul className="space-y-1">
-                  <li style={{ color: '#6b6b6b' }}>• The Grand Hotel</li>
-                  <li style={{ color: '#6b6b6b' }}>• Garden Inn & Suites</li>
-                </ul>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -269,7 +260,7 @@ export default function HomePage() {
             RSVP
           </h2>
           <p className="text-lg mb-8" style={{ color: '#2c2c2c' }}>
-            Please respond by November 21st, 2025
+            Please respond until December 14th, 2025
           </p>
           
           <div className="bg-white rounded-lg p-8 md:p-12 shadow-lg max-w-2xl mx-auto">
