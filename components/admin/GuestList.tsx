@@ -23,6 +23,7 @@ export default function GuestList() {
   const [isLoading, setIsLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'attending' | 'not_attending' | 'pending'>('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   useEffect(() => {
     fetchGuests();
@@ -44,6 +45,36 @@ export default function GuestList() {
       console.error('Error fetching guests:', error);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleDeleteGuest = async (guestId: string, guestName: string) => {
+    if (!confirm(`Are you sure you want to delete ${guestName}? This action cannot be undone.`)) {
+      return;
+    }
+
+    setDeletingId(guestId);
+    try {
+      const response = await fetch('/api/admin/delete-guest', {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('admin_token')}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ guestId }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete guest');
+      }
+
+      // Remove guest from local state
+      setGuests((prev) => prev.filter((g) => g.id !== guestId));
+    } catch (error) {
+      console.error('Error deleting guest:', error);
+      alert('Failed to delete guest. Please try again.');
+    } finally {
+      setDeletingId(null);
     }
   };
 
@@ -126,6 +157,7 @@ export default function GuestList() {
                 <th className="px-6 py-3 text-left text-sm font-semibold" style={{ color: '#8b7355' }}>Message</th>
                 <th className="px-6 py-3 text-left text-sm font-semibold" style={{ color: '#8b7355' }}>Submitted</th>
                 <th className="px-6 py-3 text-left text-sm font-semibold" style={{ color: '#8b7355' }}>Code Used</th>
+                <th className="px-6 py-3 text-center text-sm font-semibold" style={{ color: '#8b7355' }}>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -161,11 +193,21 @@ export default function GuestList() {
                     <td className="px-6 py-4 text-sm">
                       {guest.used ? <span style={{ color: '#059669' }}>✓ Yes</span> : <span style={{ color: '#6b6b6b' }}>No</span>}
                     </td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <button
+                        onClick={() => handleDeleteGuest(guest.id, guest.name)}
+                        disabled={deletingId === guest.id}
+                        className="px-3 py-1 rounded text-white text-xs font-semibold transition-all hover:opacity-80 disabled:opacity-50"
+                        style={{ backgroundColor: '#dc2626' }}
+                      >
+                        {deletingId === guest.id ? 'Deleting...' : 'Delete'}
+                      </button>
+                    </td>
                   </motion.tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan={5} className="px-6 py-8 text-center" style={{ color: '#6b6b6b' }}>
+                  <td colSpan={6} className="px-6 py-8 text-center" style={{ color: '#6b6b6b' }}>
                     No guests found
                   </td>
                 </tr>
