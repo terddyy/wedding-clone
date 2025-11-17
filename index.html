@@ -100,37 +100,56 @@
     <section class="details-section" id="details">
         <div class="container">
             <h2 class="section-title">Wedding Details</h2>
-            <div class="details-grid">
-                <div class="detail-card">
-                    <div class="detail-icon">📍</div>
-                    <h3>Location</h3>
-                    <p><strong>The Garden Estate</strong></p>
-                    <p>123 Celebration Lane</p>
-                    <p>Beautiful City, ST 12345</p>
-                    <a href="https://maps.google.com" target="_blank" class="detail-link">Get Directions</a>
+            
+            <div class="details-main-grid">
+                <!-- Location Card -->
+                <div class="location-card">
+                    <div class="location-image-placeholder">
+                        <span>Venue Image Here</span>
+                    </div>
+                    <div class="location-content">
+                        <h3>The Ceremony & Reception</h3>
+                        <p class="venue-name">The Garden Estate</p>
+                        <p class="venue-address">123 Celebration Lane, Beautiful City</p>
+                        <a href="https://maps.google.com" target="_blank" class="map-button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Open in Google Maps
+                        </a>
+                    </div>
                 </div>
-                <div class="detail-card">
-                    <div class="detail-icon">🕐</div>
-                    <h3>Schedule</h3>
-                    <p><strong>Ceremony:</strong> 4:00 PM</p>
-                    <p><strong>Cocktail Hour:</strong> 5:00 PM</p>
-                    <p><strong>Reception:</strong> 6:00 PM</p>
-                    <p><strong>Dancing:</strong> 8:00 PM</p>
-                </div>
-                <div class="detail-card">
-                    <div class="detail-icon">👔</div>
-                    <h3>Dress Code</h3>
-                    <p><strong>Semi-Formal</strong></p>
-                    <p>Ladies: Cocktail dresses or formal separates</p>
-                    <p>Gentlemen: Suit and tie</p>
-                </div>
-                <div class="detail-card">
-                    <div class="detail-icon">🏨</div>
-                    <h3>Accommodations</h3>
-                    <p><strong>Hotel Recommendations</strong></p>
-                    <p>The Grand Hotel</p>
-                    <p>Garden Inn & Suites</p>
-                    <p class="detail-note">Special rates available</p>
+
+                <!-- Other Details Grid -->
+                <div class="details-info-grid">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <span class="info-icon">🕒</span>
+                            <h4>Schedule</h4>
+                        </div>
+                        <ul class="info-list">
+                            <li><span>4:00 PM</span> Ceremony</li>
+                            <li><span>5:00 PM</span> Cocktail Hour</li>
+                            <li><span>6:00 PM</span> Reception</li>
+                            <li><span>8:00 PM</span> Dancing</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-header">
+                            <span class="info-icon">👔</span>
+                            <h4>Dress Code</h4>
+                        </div>
+                        <p>We'd love to see our friends and family get dressed up with us! The dress code is <strong>Semi-Formal</strong>.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-header">
+                            <span class="info-icon">🏨</span>
+                            <h4>Accommodations</h4>
+                        </div>
+                        <p>For your convenience, we've arranged special rates at nearby hotels. Please mention the "Jake & Micaela Wedding" when booking.</p>
+                        <ul class="hotel-list">
+                            <li>The Grand Hotel</li>
+                            <li>Garden Inn & Suites</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
