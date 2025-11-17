@@ -24,7 +24,7 @@ Edit `index.html` to customize:
 4. **Story Section** (lines 129-159): Add your personal love story
 5. **Wedding Details** (lines 168-203): Update location, schedule, dress code, hotels
 
-### Update Countdown Timer
+### Update Countdown Timerd
 
 Edit `script.js` line 33:
 ```javascript
