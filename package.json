@@ -1,0 +1,17 @@
+{
+  "name": "wedding-invitation",
+  "version": "1.0.0",
+  "description": "Beautiful wedding invitation website for Jake & Micaela",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "website"
+  ],
+  "author": "",
+  "license": "MIT"
+}

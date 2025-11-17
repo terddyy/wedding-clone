@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join us in celebrating the wedding of Jake & Micaela">
+    <title>Jake & Micaela - Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="pampas-decoration"></div>
+        <div class="hero-content">
+            <p class="wedding-of">The Wedding Celebration of</p>
+            <h1 class="couple-names">JAKE & MICAELA</h1>
+            <button class="cta-button" id="openInvitation">
+                <svg class="envelope-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="M2 7l10 7 10-7"></path>
+                </svg>
+                Open Invitation
+            </button>
+        </div>
+    </section>
+
+    <!-- Invitation Modal -->
+    <div class="modal" id="invitationModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="invitation-inner">
+                <div class="invitation-header">
+                    <p class="invitation-subtitle">Together with their families</p>
+                    <h2 class="invitation-names">Jake & Micaela</h2>
+                    <p class="invitation-text">request the pleasure of your company at their wedding celebration</p>
+                </div>
+                
+                <div class="invitation-details">
+                    <div class="detail-item">
+                        <h3>Date</h3>
+                        <p>Saturday, June 14th, 2026</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Time</h3>
+                        <p>4:00 PM</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Venue</h3>
+                        <p>The Garden Estate</p>
+                        <p class="venue-address">123 Celebration Lane, Beautiful City</p>
+                    </div>
+                </div>
+
+                <div class="invitation-footer">
+                    <p>Reception to follow</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <h2>Counting Down to Our Special Day</h2>
+        <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-timeline">
+                <div class="story-item">
+                    <div class="story-icon">❤️</div>
+                    <h3>How We Met</h3>
+                    <p class="story-date">Spring 2020</p>
+                    <p>Our paths crossed at a coffee shop on a rainy afternoon. What started as a casual conversation over lattes turned into hours of talking and laughing.</p>
+                </div>
+                <div class="story-item">
+                    <div class="story-icon">💑</div>
+                    <h3>First Date</h3>
+                    <p class="story-date">Summer 2020</p>
+                    <p>A picnic in the park turned into a sunset walk along the beach. We knew from that moment that we had found something special.</p>
+                </div>
+                <div class="story-item">
+                    <div class="story-icon">💍</div>
+                    <h3>The Proposal</h3>
+                    <p class="story-date">Winter 2024</p>
+                    <p>Under a starlit sky at our favorite spot, Jake got down on one knee. Through tears of joy, Micaela said yes to forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="details-section" id="details">
+        <div class="container">
+            <h2 class="section-title">Wedding Details</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">📍</div>
+                    <h3>Location</h3>
+                    <p><strong>The Garden Estate</strong></p>
+                    <p>123 Celebration Lane</p>
+                    <p>Beautiful City, ST 12345</p>
+                    <a href="https://maps.google.com" target="_blank" class="detail-link">Get Directions</a>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🕐</div>
+                    <h3>Schedule</h3>
+                    <p><strong>Ceremony:</strong> 4:00 PM</p>
+                    <p><strong>Cocktail Hour:</strong> 5:00 PM</p>
+                    <p><strong>Reception:</strong> 6:00 PM</p>
+                    <p><strong>Dancing:</strong> 8:00 PM</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">👔</div>
+                    <h3>Dress Code</h3>
+                    <p><strong>Semi-Formal</strong></p>
+                    <p>Ladies: Cocktail dresses or formal separates</p>
+                    <p>Gentlemen: Suit and tie</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🏨</div>
+                    <h3>Accommodations</h3>
+                    <p><strong>Hotel Recommendations</strong></p>
+                    <p>The Grand Hotel</p>
+                    <p>Garden Inn & Suites</p>
+                    <p class="detail-note">Special rates available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Journey Together</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background: linear-gradient(135deg, #e8d5c4 0%, #d4b5a0 100%);">
+                    <div class="gallery-placeholder">📸</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);">
+                    <div class="gallery-placeholder">📸</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #d4b5a0 0%, #c4a590 100%);">
+                    <div class="gallery-placeholder">📸</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #e8d5c4 0%, #f5e6d3 100%);">
+                    <div class="gallery-placeholder">📸</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #c4a590 0%, #d4b5a0 100%);">
+                    <div class="gallery-placeholder">📸</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);">
+                    <div class="gallery-placeholder">📸</div>
+                </div>
+            </div>
+            <p class="gallery-note">Add your favorite photos here!</p>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section" id="rsvp">
+        <div class="container">
+            <h2 class="section-title">RSVP</h2>
+            <p class="rsvp-subtitle">Please respond by May 1st, 2026</p>
+            
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select...</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Will you attend? *</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Select...</option>
+                            <option value="yes">Joyfully Accepts</option>
+                            <option value="no">Regretfully Declines</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dietary">Dietary Restrictions</label>
+                    <textarea id="dietary" name="dietary" rows="3" placeholder="Please let us know about any dietary restrictions or allergies..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Share your well wishes with us..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Submit RSVP</button>
+            </form>
+
+            <div class="rsvp-success" id="rsvpSuccess">
+                <div class="success-icon">✓</div>
+                <h3>Thank You!</h3>
+                <p>Your RSVP has been received. We can't wait to celebrate with you!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">With love, Jake & Micaela</p>
+            <p class="footer-date">June 14th, 2026</p>
+            <div class="footer-hearts">❤️</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
