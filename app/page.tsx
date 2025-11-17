@@ -47,9 +47,10 @@ export default function HomePage() {
     <div className="min-h-screen" style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#faf8f5' }}>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center" style={{ backgroundColor: '#f5e6d3' }}>
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%238b7355" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+        <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{
+          backgroundImage: 'url("/images/hero-bg.png")',
         }}></div>
+        <div className="absolute inset-0 bg-black opacity-20"></div>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,17 +58,16 @@ export default function HomePage() {
           transition={{ duration: 1 }}
           className="text-center z-10 px-4"
         >
-          <p className="text-sm tracking-widest mb-4" style={{ color: '#6b6b6b', fontFamily: "'Montserrat', sans-serif" }}>
+          <p className="text-sm tracking-widest mb-4" style={{ color: '#ffffff', textShadow: '1px 1px 3px rgba(0,0,0,0.5)' }}>
             THE WEDDING CELEBRATION OF
           </p>
-          <h1 className="text-7xl md:text-9xl font-light mb-8" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+          <h1 className="text-7xl md:text-9xl font-light mb-8" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#ffffff', textShadow: '2px 2px 5px rgba(0,0,0,0.5)' }}>
             JHE & EIFER
           </h1>
           <button
-            onClick={() => setShowModal(true)
-            }
+            onClick={() => setShowModal(true)}
             className="px-8 py-4 rounded-lg font-medium transition-all hover:scale-105 flex items-center gap-3 mx-auto"
-            style={{ backgroundColor: '#8b7355', color: '#ffffff' }}
+            style={{ backgroundColor: 'rgba(139, 115, 85, 0.8)', color: '#ffffff', border: '1px solid rgba(255,255,255,0.5)' }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <rect x="2" y="4" width="20" height="16" rx="2"></rect>
@@ -112,11 +112,8 @@ export default function HomePage() {
                 <div>
                   <h3 className="font-semibold mb-1" style={{ color: '#8b7355' }}>Ceremony & Reception</h3>
                   <p style={{ color: '#2c2c2c' }}>Kapitan Moy - Bulwagang Bayani (2nd Floor)</p>
-                  
                 </div>
               </div>
-              
-             
             </div>
           </motion.div>
         </div>
@@ -145,6 +142,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-lg" style={{ color: '#6b6b6b' }}>
+            December 21, 2025
+          </p>
         </section>
       )}
 
@@ -165,7 +165,7 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="text-2xl mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
                   The Ceremony & Reception
                 </h3>
@@ -228,11 +228,33 @@ export default function HomePage() {
                   We'd love to see our friends and family get dressed up with us! The dress code is{' '}
                   <strong style={{ color: '#8b7355' }}>Whimsical Cocktail Formal Attire</strong>.
                 </p>
+                <div className="mt-4">
+                  <img 
+                    src="/images/outfit.png" 
+                    alt="Dress Code Examples"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
               </div>
 
              
             </div>
           </div>
+        </div>
+      </section>
+
+
+      {/* Gift Registry Section */}
+      <section className="py-20 text-center" style={{ backgroundColor: '#ffffff' }}>
+        <div className="max-w-4xl mx-auto px-4">
+          
+          <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+            A Note on Gifts
+          </h2>
+          <p className="text-lg" style={{ color: '#2c2c2c' }}>
+            We have been blessed with everything we need, so your presence is all that we request. 
+            If you desire to give a monetary gift, a contribution to our new life together would be a lovely blessing.
+          </p>
         </div>
       </section>
 
@@ -302,7 +324,7 @@ export default function HomePage() {
             
             <p className="text-sm mt-6" style={{ color: '#6b6b6b' }}>
               Need help?{' '}
-              <a href="mailto:terddy03@gmail.com" className="underline" style={{ color: '#8b7355' }}>
+              <a href="https://www.facebook.com/jennifer.salo.7923" className="underline" style={{ color: '#8b7355' }}>
                 Contact us
               </a>
             </p>

@@ -19,6 +19,7 @@ import { useState, useEffect, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import AdminAuth from '@/components/admin/AdminAuth';
 import AdminDashboard from '@/components/admin/AdminDashboard';
+import Navigation from '@/components/layout/Navigation';
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -45,12 +46,15 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-100 to-amber-50 py-8 px-4">
-      {!isAuthenticated ? (
-        <AdminAuth onAuthSuccess={() => setIsAuthenticated(true)} />
-      ) : (
-        <AdminDashboard onLogout={() => setIsAuthenticated(false)} />
-      )}
-    </div>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-b from-amber-100 to-amber-50 py-8 px-4">
+        {!isAuthenticated ? (
+          <AdminAuth onAuthSuccess={() => setIsAuthenticated(true)} />
+        ) : (
+          <AdminDashboard onLogout={() => setIsAuthenticated(false)} />
+        )}
+      </div>
+    </>
   );
 }
