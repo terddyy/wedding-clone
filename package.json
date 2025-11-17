@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "python -m http.server 8000",
-    "build": "echo 'Static site - no build needed'"
+    "build": "mkdir public; cp index.html styles.css script.js public/"
   },
   "keywords": [
     "wedding",
