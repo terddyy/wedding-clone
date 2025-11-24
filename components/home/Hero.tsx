@@ -81,17 +81,15 @@ export default function Hero() {
                     </ul>
                 </motion.nav>
             </div>
-
-            {/* Bottom Block - 65% */}
+            {/* Bottom section with background image */}
             <div className="h-[65%] relative bg-neutral-200">
                 <Image
-                    src="/images/hero-couple.JPG"
-                    alt="Jhe & Eifer"
-                    fill
-                    className="object-cover object-top"
-                    priority
+                src="/images/hero-couple.JPG"
+                alt="Jhe & Eifer posing together"
+                fill
+                className="object-cover object-top"
+                priority
                 />
-                {/* Overlay for better text contrast if needed, but design requested clean photo */}
             </div>
         </section>
     );

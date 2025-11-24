@@ -30,7 +30,7 @@ import Button from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Navigation from '@/components/layout/Navigation';
-import Hero from '@/components/home/Hero';
+
 
 export default function RSVPCodePage() {
   const router = useRouter();
@@ -110,9 +110,8 @@ export default function RSVPCodePage() {
   return (
     <>
       <Navigation />
-      <Hero />
-      <div className="min-h-screen py-20" style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#faf8f5' }}>
-        <div className="max-w-4xl mx-auto px-4">
+      <div style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#faf8f5' }}>
+        <div className="max-w-4xl mx-auto px-4 py-20">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -282,23 +281,6 @@ export default function RSVPCodePage() {
             <p className="text-sm" style={{ color: '#6b6b6b' }}>
               Contact us if you need to change your RSVP
             </p>
-          </div>
-        </motion.div>
-
-        {/* Thematic Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12"
-        >
-          <div className="relative aspect-[4/5] max-w-xl mx-auto rounded-sm shadow-md overflow-hidden">
-            <Image
-              src="/images/IMG_9755.JPG"
-              alt="Jhe & Eifer"
-              fill
-              className="object-cover"
-            />
           </div>
         </motion.div>
         </div>
