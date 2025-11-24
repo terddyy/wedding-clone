@@ -88,9 +88,7 @@ export default function AdminAuth({ onAuthSuccess }: AdminAuthProps) {
         </form>
 
         <div className="mt-6 p-4 rounded-lg" style={{ backgroundColor: '#f5e6d3' }}>
-          <p className="text-xs text-center" style={{ color: '#8b7355' }}>
-            <strong>Demo Password:</strong> admin123
-          </p>
+         
         </div>
       </div>
     </motion.div>

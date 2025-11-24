@@ -25,11 +25,12 @@
 
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import PageSection from '@/components/ui/PageSection';
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Navigation from '@/components/layout/Navigation';
+import Hero from '@/components/home/Hero';
 
 export default function RSVPCodePage() {
   const router = useRouter();
@@ -109,7 +110,9 @@ export default function RSVPCodePage() {
   return (
     <>
       <Navigation />
-      <PageSection>
+      <Hero />
+      <div className="min-h-screen py-20" style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#faf8f5' }}>
+        <div className="max-w-4xl mx-auto px-4">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -117,10 +120,10 @@ export default function RSVPCodePage() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mb-12"
         >
-          <h1 className="text-6xl md:text-7xl font-normal mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+          <h1 className="text-5xl md:text-6xl font-light mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
             RSVP
           </h1>
-          <p className="text-lg" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
+          <p className="text-lg" style={{ fontFamily: "'Montserrat', sans-serif", color: '#6b6b6b' }}>
             We can't wait to celebrate with you!
           </p>
           <p className="mt-2" style={{ fontFamily: "'Montserrat', sans-serif", color: '#6b6b6b' }}>
@@ -133,7 +136,7 @@ export default function RSVPCodePage() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="rounded-lg shadow-md p-8 md:p-12 mb-8" style={{ backgroundColor: '#f5e6d3' }}
+          className="rounded-lg shadow-md p-8 md:p-12 mb-8 max-w-2xl mx-auto" style={{ backgroundColor: '#f5e6d3' }}
         >
           {/* Lock Icon */}
           <div className="flex justify-center mb-6">
@@ -206,7 +209,7 @@ export default function RSVPCodePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto"
         >
           {/* Card 1: Deadline */}
           <div className="rounded-lg p-6 text-center shadow-md" style={{ backgroundColor: '#ffffff' }}>
@@ -281,7 +284,25 @@ export default function RSVPCodePage() {
             </p>
           </div>
         </motion.div>
-      </PageSection>
+
+        {/* Thematic Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-12"
+        >
+          <div className="relative aspect-[4/5] max-w-xl mx-auto rounded-sm shadow-md overflow-hidden">
+            <Image
+              src="/images/IMG_9755.JPG"
+              alt="Jhe & Eifer"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
+        </div>
+      </div>
     </>
   );
 }

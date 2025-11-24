@@ -5,7 +5,7 @@
 Visit: `http://localhost:3000/admin` (development) or `https://yourwebsite.com/admin` (production)
 
 ### Login Credentials
-- **Password**: `admin123` (default demo password)
+- 
 - **Change this in production!** Update the `ADMIN_PASSWORD_HASH` environment variable
 
 ---

@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+        serif: ['var(--font-bodoni)', 'serif'],
+        script: ['var(--font-pinyon)'],
+        montserrat: ['var(--font-montserrat)'],
+      },
       colors: {
         blush: {
           50: '#fdf2f8',
