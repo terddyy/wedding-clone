@@ -13,7 +13,7 @@ export default function VideoSection() {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
-                        Our Story
+                        Save the Date
                     </h2>
                     <div className="aspect-w-16 aspect-h-9 relative" style={{ paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', background: '#000' }}>
                         <iframe 
