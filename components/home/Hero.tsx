@@ -42,7 +42,7 @@ export default function Hero() {
                         className="text-2xl md:text-3xl text-white/90 font-light mt-3 tracking-wider"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        JHE & EIFER
+                        #Jheifer2025
                     </motion.p>
                 </div>
 
@@ -54,9 +54,9 @@ export default function Hero() {
                     className="flex flex-col md:flex-row items-center gap-2 md:gap-8 text-white/90 text-[10px] md:text-xs uppercase tracking-[0.2em] font-sans mb-auto"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
-                    <span>Jhe & Eifer</span>
+                    <span>#Jheifer2025</span>
                     <span className="hidden md:inline">•</span>
-                    <span>December 21, 2025</span>
+                    <span className="font-bold text-base md:text-lg">December 21, 2025 - 4:00 PM</span>
                     <span className="hidden md:inline">•</span>
                     <span>Marikina City</span>
                 </motion.div>

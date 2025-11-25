@@ -11,12 +11,13 @@ const galleryItems = [
     },
     {
         id: 2,
-        src: '/images/IMG_9724.JPG',
+        src: '/images/IMG_9717.JPG',
         alt: 'Couple Photo 2',
     },
     {
         id: 3,
-        src: '/images/IMG_9717.JPG',
+        src: '/images/IMG_9749.JPG',
+
         alt: 'Couple Photo 3',
     },
     {
@@ -47,12 +48,13 @@ export default function Gallery() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <span className="font-script text-3xl text-[#8b7355] block mb-2" style={{ fontFamily: 'var(--font-pinyon)' }}>
-                        captured moments
-                    </span>
-                    <h2 className="text-5xl md:text-6xl text-[#2c2c2c]" style={{ fontFamily: 'var(--font-bodoni)' }}>
-                        OUR JOURNEY
+                    <h2 className="font-script text-4xl md:text-5xl text-[#8b7355] block mb-2" style={{ fontFamily: 'var(--font-pinyon)' }}>
+                        Captured Moments
                     </h2>
+                    <div className="mt-6 max-w-2xl mx-auto">
+                        <p className="text-xl italic text-[#2c2c2c]">Unless Jehovah builds the house, it is in vain that its builders work hard on it.</p>
+                        <p className="text-sm text-[#8b7355] mt-1">Psalm 127:1</p>
+                    </div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -15,6 +15,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Hero from '@/components/home/Hero';
 import Gallery from '@/components/home/Gallery';
+import VideoSection from '@/components/home/VideoSection';
 
 export default function HomePage() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -199,6 +200,9 @@ export default function HomePage() {
 
       {/* Gallery Section */}
       <Gallery />
+
+      {/* Video Section */}
+      <VideoSection />
 
       {/* RSVP Section */}
       <section id="rsvp" className="py-20" style={{ backgroundColor: '#f5e6d3' }}>

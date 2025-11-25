@@ -11,10 +11,30 @@
 
 'use client';
 
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 export default function LandingPage() {
+  const router = useRouter();
+
+  const handleOpenInvitation = (e: React.MouseEvent) => {
+    e.preventDefault();
+    try {
+      const audioSrc = '/sound/Deep%20Inside%20of%20you%20WEB%20MUSIC.mp3';
+      const audio = new Audio(audioSrc);
+      audio.volume = 0.9;
+      // start playback on user interaction
+      audio.play().catch(() => {
+        // ignore play errors (autoplay restrictions may prevent immediate play)
+      });
+    } catch (err) {
+      // ignore errors creating/playing audio
+    }
+
+    // allow a short moment for playback to start, then navigate
+    setTimeout(() => router.push('/home'), 220);
+  };
+
   return (
     <div className="min-h-screen" style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#faf8f5' }}>
       {/* Hero Section - Full Screen Only */}
@@ -36,8 +56,9 @@ export default function LandingPage() {
           <h1 className="text-7xl md:text-9xl font-light mb-8" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#ffffff', textShadow: '2px 2px 5px rgba(0,0,0,0.5)' }}>
             JHE & EIFER
           </h1>
-          <Link
+          <a
             href="/home"
+            onClick={handleOpenInvitation}
             className="px-8 py-4 rounded-lg font-medium transition-all hover:scale-105 flex items-center gap-3 mx-auto w-fit"
             style={{ backgroundColor: 'rgba(139, 115, 85, 0.8)', color: '#ffffff', border: '1px solid rgba(255,255,255,0.5)' }}
           >
@@ -46,7 +67,7 @@ export default function LandingPage() {
               <path d="M2 7l10 7 10-7"></path>
             </svg>
             Open Invitation
-          </Link>
+          </a>
         </motion.div>
       </section>
     </div>
