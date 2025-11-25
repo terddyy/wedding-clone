@@ -60,6 +60,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen" style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#faf8f5' }}>
+      {/* Made by Header */}
+      <div className="h-10 bg-white text-center flex items-center justify-center" style={{ fontSize: '12px', color: '#8b7355', fontWeight: '500', letterSpacing: '0.5px' }}>
+        made by Zentari Tech Solutions
+      </div>
+
       {/* Hero Section */}
       <Hero />
 
@@ -252,7 +257,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="py-12 text-center" style={{ backgroundColor: '#ffffff' }}>
         <p className="text-lg mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
-          With love, Jhe & Eifer
+          With love, Jerome Santos & Jennifer Salo
         </p>
         <p style={{ color: '#6b6b6b' }}>December 21st, 2025</p>
         <div className="text-2xl mt-4">❤️</div>

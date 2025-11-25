@@ -23,6 +23,7 @@ export default function LandingPage() {
       const audioSrc = '/sound/Deep%20Inside%20of%20you%20WEB%20MUSIC.mp3';
       const audio = new Audio(audioSrc);
       audio.volume = 0.9;
+          audio.loop = true;
       // start playback on user interaction
       audio.play().catch(() => {
         // ignore play errors (autoplay restrictions may prevent immediate play)

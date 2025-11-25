@@ -42,7 +42,7 @@ export default function Hero() {
                         className="text-2xl md:text-3xl text-white/90 font-light mt-3 tracking-wider"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        #Jheifer2025
+                        JHE & EIFER
                     </motion.p>
                 </div>
 
