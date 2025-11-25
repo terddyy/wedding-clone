@@ -62,7 +62,9 @@ export default function HomePage() {
     <div className="min-h-screen" style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: '#faf8f5' }}>
       {/* Made by Header */}
       <div className="h-10 bg-white text-center flex items-center justify-center" style={{ fontSize: '12px', color: '#8b7355', fontWeight: '500', letterSpacing: '0.5px' }}>
-        made by Zentari Tech Solutions
+        <a href="https://www.facebook.com/profile.php?id=61575723998769" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          made by Zentari Tech Solutions
+        </a>
       </div>
 
       {/* Hero Section */}
@@ -217,7 +219,7 @@ export default function HomePage() {
             RSVP
           </h2>
           <p className="text-lg mb-8" style={{ color: '#2c2c2c' }}>
-            Please respond until December 14th, 2025
+            Please respond until December 12th, 2025
           </p>
 
           <div className="bg-white rounded-lg p-8 md:p-12 shadow-lg max-w-2xl mx-auto">
