@@ -145,6 +145,7 @@ export default function HomePage() {
                 </div>
                 <ul className="space-y-2">
                   {[
+                    { time: '4:00 PM', event: 'Entourage' },
                     { time: '5:00 PM', event: 'Ceremony' },
                     { time: '6:30 PM', event: 'Dinner' },
                     { time: '7:30 PM', event: 'Program & Cocktail Hour' },
@@ -192,8 +193,8 @@ export default function HomePage() {
             A Note on Gifts
           </h2>
           <p className="text-lg" style={{ color: '#2c2c2c' }}>
-            We have been blessed with everything we need, so your presence is all that we request.
-            If you desire to give a monetary gift, a contribution to our new life together would be a lovely blessing.
+            We have been blessed with everything we need. But if 
+            you desire to give a monetary gift, a contribution to our new life together would be a lovely blessing.
           </p>
         </div>
       </section>
