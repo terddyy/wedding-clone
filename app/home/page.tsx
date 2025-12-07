@@ -199,10 +199,24 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#8b7355' }}>
             A Note on Gifts
           </h2>
-          <p className="text-lg" style={{ color: '#2c2c2c' }}>
+          <p className="text-lg mb-8" style={{ color: '#2c2c2c' }}>
             We have been blessed with everything we need. But if 
             you desire to give a monetary gift, a contribution to our new life together would be a lovely blessing.
           </p>
+          <div className="flex justify-center gap-6 flex-wrap">
+            <img
+              src="/images/gcash.jpg"
+              alt="GCash Payment"
+              className="max-w-xs h-auto rounded-lg"
+              style={{ maxHeight: '180px' }}
+            />
+            <img
+              src="/images/gotyme.jpg"
+              alt="GoTyme Payment"
+              className="max-w-xs h-auto rounded-lg"
+              style={{ maxHeight: '180px' }}
+            />
+          </div>
         </div>
       </section>
 
